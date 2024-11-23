@@ -1,0 +1,11 @@
+framework module Simplebest {
+  umbrella header "Simplebest.h"
+
+  export *
+  module * { export * }
+}
+
+module Simplebest.Swift {
+    header "Simplebest-Swift.h"
+    requires objc
+}

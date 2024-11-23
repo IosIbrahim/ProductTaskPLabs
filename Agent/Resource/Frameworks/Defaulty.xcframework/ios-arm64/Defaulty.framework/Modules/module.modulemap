@@ -1,0 +1,11 @@
+framework module Defaulty {
+  umbrella header "Defaulty.h"
+
+  export *
+  module * { export * }
+}
+
+module Defaulty.Swift {
+    header "Defaulty-Swift.h"
+    requires objc
+}

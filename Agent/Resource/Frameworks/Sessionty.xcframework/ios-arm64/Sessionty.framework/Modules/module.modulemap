@@ -1,0 +1,11 @@
+framework module Sessionty {
+  umbrella header "Sessionty.h"
+
+  export *
+  module * { export * }
+}
+
+module Sessionty.Swift {
+    header "Sessionty-Swift.h"
+    requires objc
+}

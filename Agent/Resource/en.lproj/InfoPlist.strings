@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  EasyCash
+
+  Created by Omar Mohamed on 08/11/2022.
+  
+*/
+"CFBundleDisplayName"  = "Task";
+"NSCameraUsageDescription" = "In order to choose profile image.";
+"NSPhotoLibraryUsageDescription" = "In order to choose profile image.";

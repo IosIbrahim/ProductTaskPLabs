@@ -1,0 +1,59 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Sessionty
+import Combine
+import Foundation
+@_exported import Sessionty
+import Swift
+public protocol Endpoint {
+  var value: Swift.String { get }
+}
+final public class Session : Sessionty.Sessionable {
+  required public init(with requirements: Sessionty.Configurations)
+  final public func get<E, D>(from endpoint: E, _ type: D.Type, with headers: Sessionty.Headers? = .none, _ handler: @escaping (Swift.Result<D, Swift.Error>) -> Swift.Void) where E : Sessionty.Endpoint, D : Swift.Decodable
+  final public func post<E, D>(_ data: Foundation.Data?, _ type: D.Type, for endpoint: E, with headers: Sessionty.Headers? = .none, _ handler: @escaping (Swift.Result<D, Swift.Error>) -> Swift.Void) where E : Sessionty.Endpoint, D : Swift.Decodable
+  final public func cancel()
+  final public func upload<E, D>(multipart files: [Sessionty.File], parameters body: Foundation.Data?, _ type: D.Type, for endpoint: E, with headers: Sessionty.Headers? = .none, _ handler: @escaping (Swift.Result<D, Swift.Error>) -> Swift.Void) where E : Sessionty.Endpoint, D : Swift.Decodable
+  final public var rawData: Foundation.Data {
+    get
+  }
+  final public func debugging(_ block: @escaping (Sessionty.Debug) -> Swift.Void)
+  @objc deinit
+}
+public struct SessionResponse {
+  public var data: Foundation.Data?, error: Swift.Error?, info: Foundation.URLResponse?
+}
+public struct Debug {
+  public var request: Foundation.URLRequest?, response: Sessionty.SessionResponse?
+}
+final public class Configurations {
+  final public var timeoutInterval: Foundation.TimeInterval, sessionConfigs: Foundation.URLSessionConfiguration, sessionDelegate: Foundation.URLSessionDelegate?, decoder: Foundation.JSONDecoder
+  required public init(baseLink: Swift.String)
+  @objc deinit
+}
+public protocol Sessionable {
+  var rawData: Foundation.Data { get }
+  func debugging(_ block: @escaping (Sessionty.Debug) -> Swift.Void)
+  func cancel()
+  func post<E, D>(_ data: Foundation.Data?, _ type: D.Type, for endpoint: E, with headers: Sessionty.Headers?, _ handler: @escaping (Swift.Result<D, Swift.Error>) -> Swift.Void) where E : Sessionty.Endpoint, D : Swift.Decodable
+  func get<E, D>(from endpoint: E, _ type: D.Type, with headers: Sessionty.Headers?, _ handler: @escaping (Swift.Result<D, Swift.Error>) -> Swift.Void) where E : Sessionty.Endpoint, D : Swift.Decodable
+  func upload<E, D>(multipart files: [Sessionty.File], parameters body: Foundation.Data?, _ type: D.Type, for endpoint: E, with headers: Sessionty.Headers?, _ handler: @escaping (Swift.Result<D, Swift.Error>) -> Swift.Void) where E : Sessionty.Endpoint, D : Swift.Decodable
+}
+public typealias Headers = [Swift.String : Swift.String]
+public typealias Parameters = [Swift.String : Any]
+public struct Methods {
+}
+public struct File {
+  public init(key: Swift.String, content: Foundation.Data, name: Swift.String, mimeType: Sessionty.File.MimeTypes)
+  public enum MimeTypes : Swift.String {
+    case jpeg, png, all
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+extension Sessionty.File.MimeTypes : Swift.Equatable {}
+extension Sessionty.File.MimeTypes : Swift.Hashable {}
+extension Sessionty.File.MimeTypes : Swift.RawRepresentable {}

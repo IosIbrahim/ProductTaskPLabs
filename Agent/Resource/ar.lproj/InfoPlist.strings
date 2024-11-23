@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  EasyCash
+
+  Created by Omar Mohamed on 08/11/2022.
+  
+*/
+"CFBundleDisplayName"  = "تاسك";
+
+"NSCameraUsageDescription" = "تحديد واختيار صوره لملفك الشخصي.";
+"NSPhotoLibraryUsageDescription" = "تحديد واختيار صوره لملفك الشخصي.";

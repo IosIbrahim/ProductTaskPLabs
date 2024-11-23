@@ -1,0 +1,106 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Locality
+import CoreLocation
+@_exported import Locality
+import Swift
+extension CLLocation {
+  public func bearing(to location: Locality.Location) -> Locality.LocationDegree
+  public static var zero: Locality.Location {
+    get
+  }
+  public func isValid(in horizontal: Locality.Accuracy = 15.0, in vertical: Locality.Accuracy = 10.0) -> Swift.Bool
+  convenience public init(waypoint: Locality.Waypoint)
+}
+extension CLLocationCoordinate2D : Swift.Equatable {
+  public var isValid: Swift.Bool {
+    get
+  }
+  public static var zero: Locality.Waypoint {
+    get
+  }
+  public func toLocation() -> Locality.Location
+  public static func == (lhs: CoreLocation.CLLocationCoordinate2D, rhs: CoreLocation.CLLocationCoordinate2D) -> Swift.Bool
+}
+extension Double {
+  public static func forNavigation() -> Locality.Accuracy
+  public static func custom(_ value: Locality.Accuracy) -> Locality.Accuracy
+  public static func forBest() -> Locality.Accuracy
+}
+public typealias Waypoint = CoreLocation.CLLocationCoordinate2D
+public typealias Location = CoreLocation.CLLocation
+public typealias LocationDegree = CoreLocation.CLLocationDegrees
+public typealias Distance = CoreLocation.CLLocationDistance
+public typealias Accuracy = CoreLocation.CLLocationAccuracy
+public typealias Direction = CoreLocation.CLLocationDirection
+public typealias ActivityType = CoreLocation.CLActivityType
+public struct LocalityError : Foundation.LocalizedError {
+  public var type: Locality.LocalityError.Types {
+    get
+  }
+  public var localizedDescription: Swift.String {
+    get
+  }
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public enum Types {
+    case serviceIsDown
+    case restricted
+    case unknown
+    case coreError
+    public static func == (a: Locality.LocalityError.Types, b: Locality.LocalityError.Types) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+}
+public enum Mode {
+  case always
+  case use
+  public static func == (a: Locality.Mode, b: Locality.Mode) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public struct Configurations {
+  public var desiredAccuracy: Locality.Accuracy
+  public var activityType: Locality.ActivityType
+  public var distanceFilter: Locality.Distance
+  public var pauseAutomatically: Swift.Bool
+  public static var navigation: Locality.Configurations {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers final public class Locator : ObjectiveC.NSObject {
+  final public var whenError: ((Locality.LocalityError) -> Swift.Void)?, whenUpdateLocation: ((Locality.Location) -> Swift.Void)?, whenNeedActivateService: (() -> Swift.Void)?
+  final public var settings: Locality.Configurations {
+    get
+    set
+  }
+  final public var current: Locality.Location {
+    get
+  }
+  final public var trueHeading: Locality.Direction? {
+    get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension Locator {
+  final public func start(in mode: Locality.Mode = .use)
+  final public func pause()
+  final public func stop()
+  final public func resume()
+}
+extension Locator : CoreLocation.CLLocationManagerDelegate {
+  @objc final public func locationManager(_ manager: CoreLocation.CLLocationManager, didFailWithError error: Swift.Error)
+  @objc final public func locationManager(_ manager: CoreLocation.CLLocationManager, didUpdateLocations locations: [CoreLocation.CLLocation])
+  @objc final public func locationManager(_ manager: CoreLocation.CLLocationManager, didChangeAuthorization status: CoreLocation.CLAuthorizationStatus)
+}
+extension Locality.LocalityError.Types : Swift.Equatable {}
+extension Locality.LocalityError.Types : Swift.Hashable {}
+extension Locality.Mode : Swift.Equatable {}
+extension Locality.Mode : Swift.Hashable {}

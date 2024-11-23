@@ -1,0 +1,11 @@
+framework module Locality {
+  umbrella header "Locality.h"
+
+  export *
+  module * { export * }
+}
+
+module Locality.Swift {
+    header "Locality-Swift.h"
+    requires objc
+}

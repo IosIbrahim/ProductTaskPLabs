@@ -1,0 +1,138 @@
+/* 
+  Localizable.strings
+  EasyCash Merchant
+
+  Created by Omar Mohamed on 29/11/2022.
+  
+*/
+
+"Lang" = "English";
+"English" = "انجليزي";
+"no.internet" = "لا يوجد اتصال بالانترنت!";
+"login" = "تسجيل الدخول";
+"forgot.password" = "نسيت رمز التحقق";
+"done" = "تم";
+"cancel" = "الغاء";
+"ok" = "موافق";
+"unknown.error" = "حدث امر غير متوقع فضلا اعد المحاولة!";
+"mobile" = "رقم الهاتف";
+"merchant.id" = "الرقم التعريفي للتاجر";
+"merchant.name" = "إسم التاجر";
+"pin" = "رمز التحقق";
+"new.user" = "عميل جديد";
+"user.name" = "اسم المستخدم";
+"password" = "كلمة المرور";
+"enter.user.name" = "ادخل اسم المستخدم";
+"enter.password" = "ادخل كلمة المرور";
+"short.password" = "كلمة المرور قصيرة";
+"appraisal" = "التقييمات";
+"docs" = "ملفات الموظف";
+"payroll" = "المرتب";
+"vacations" = "الاجازات";
+"roster" = "الجدول الزمني";
+"resignation" = "استقالة";
+"leave.resumption" = "عودة من اجازة";
+"sick.leave" = "اجارة مرضية";
+"withdrawal.resignation" = "سحب استقالة";
+"notifcations" = "الاشعارات";
+"help.supoort" = "الدعم والمساعدة";
+"permission" = "الاذونات";
+"salary.certificates" = "شهادة المرتب";
+"user.guide" = "دليل المستخدم";
+"hospital" = "المستشفي";
+"group" = "المجموعة";
+"welcome" = "اهلا ،";
+"back" = "عودة";
+ "next" = "التالي";
+"answered" = "مجاب عن";
+"previous" = "السابق";
+"this.week" = "هذا الاسبوع";
+"all" = "الكل";
+"view.all" = "مشاهدة الكل";
+"success" = "ناجحة";
+"failed" = "فاشلة";
+"balance" = "الرصيد ( الجنيه )";
+"home" = "الرئيسية";
+"profile" = "الحساب الشخصي";
+"notifications" = "الاشعارات";
+"no.data" = "لا توجد بيانات";
+"settings" = "الاعدادات";
+"terms" = "الشروط والاحكام";
+"about.us" = "نبذة عنا";
+"branch.name" = "اسم الفرع";
+"unread"= "غير المقروءة";
+"mark.alll" = "تم قراءة الكل";
+"reset.language" = "تغيير اللغة";
+"logout" = "تسجيل الخروج";
+"details" = "تفاصيل العملية";
+// reset mPin
+"logout.message" = "تسجيل الخروج من حسابك؟";
+"yes" = "نعم";
+"no" = "لا";
+// Blockd
+"blocked.account" = "تم قفل حسابك";
+"blocked.account.hint" = "اتصل بالمسؤول لاستعادة حسابك";
+"enter.mpin.confirm" = "ادخل mPin للتآكيد";
+"amount" = "المبلغ";
+"pound" = "جنيه";
+"create.reqeust"= "إنشاء طلب";
+"paymet.request.sent" = "تم إرسال طلب الدفع!";
+"confirm"= "تآكيد";
+"to" = "إلي";
+"cancel.request"= "الغاء الطلب";
+"cancel.request.hint" = "هل أنت متأكد أنك تريد إلغاء هذا الطلب؟";
+"from" = "من";
+"to" = "إلي";
+"request.type" = "نوع الطلب";
+"enter.phone" = "ادخل رقم الهاتف";
+"apply" = "تنفيذ";
+"reset" = "إعادة ضبط";
+// session expired
+"expired.session" = "انتهت الجلسة";
+"expired.session.hint" = "تم انتهاء هذه الجلسة";
+"create.new.request" = "انشاء طلب جديد";
+// withdrawal
+"resignation.withdraw.number" = "رقم سحب الاستقالة";
+"resignation.withdraw.date" = "تاريخ سحب الاستقالة";
+"resignation.number" = "رقم الاستقالة";
+"resignation.date" = "تاريخ الاستقالة";
+"end.service.date" = "تاريخ نهاية الخدمة";
+"date.of.discharge" = "تاريخ الانهاء";
+"reason" = "السبب";
+"request.status" = "حالة الطلب";
+"notes" = "ملاحظات";
+"save" = "حفظ";
+"choose" = "اختر ";
+"enter" = " ادخل";
+// vacations
+"taken.balance" = "الرصيد المآخوذ";
+"vacation.period" = "مدة الاجازة";
+"sick.report" = "الشهادة المرضية";
+"choose.date" = "اختر التاريخ";
+"from.date" = "من تاريخ";
+"to.date" = "الي تاريخ";
+"total.days" = "مجموع الايام";
+"discount" = "الخصم";
+"camera" = "الكاميرا";
+"photo.library" = "المرفقات";
+"vacation.report" = "اضف تقرير الاجازة";
+// evaluation
+"personal.evaluation" = "تقييم شخصي ";
+"direct.head.evaluation" = "تقييم رئيس مباشر";
+"colleague.evaluation" = "تقييم زميل";
+"rated.by" = "تم التقييم ب";
+"rate" = "تقييم";
+"trans.date" = " تاريخ الانتقال";
+"start.date" = "تاريخ البداية";
+"end.date" = "تاريخ الانتهاء";
+"evaluation.type" = "نوع التقييم";
+"evaluation.name" = "اسم التقييم";
+"search" = "بحث";
+"save.done" = "تم الحفظ";
+// payroll
+"cross.salary" = "الراتب الكلى";
+"allowanes" = "البدلات";
+"deducations" = "الخصومات";
+"total.salary" = "اجمالي الراتب";
+"month" = "شهر";
+"request.vacation" = "طلب اجازة";

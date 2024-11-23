@@ -1,0 +1,186 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.2 (swiftlang-1103.0.32.1 clang-1103.0.32.29)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Simplebest
+import Foundation
+@_exported import Simplebest
+import Swift
+import SystemConfiguration
+import UIKit.UIColor
+import UIKit.UIFont
+import UIKit.UIImage
+import UIKit
+public protocol ResizeableImage {
+}
+extension ResizeableImage where Self : UIKit.UIImage {
+  public func resize(by size: CoreGraphics.CGSize, isOpaque: Swift.Bool = false, scale: CoreGraphics.CGFloat = UIScreen.main.scale) -> UIKit.UIImage?
+}
+public protocol RotateableImage {
+}
+extension RotateableImage where Self : UIKit.UIImage {
+  public func rotated(byDegrees degree: Swift.Double) -> UIKit.UIImage
+}
+public protocol MaskableImage {
+}
+extension MaskableImage where Self : UIKit.UIImage {
+  public func mask(with color: UIKit.UIColor) -> UIKit.UIImage
+}
+public protocol Literally {
+}
+extension Literally where Self : UIKit.UIImage {
+  public func draw(in rect: CoreGraphics.CGRect, text: Swift.String, attributes: [Foundation.NSAttributedString.Key : Any]) -> UIKit.UIImage
+}
+extension URL {
+  public func isValid() -> Swift.Bool
+}
+extension Data {
+  public func toString() -> Swift.String
+  public func toJSONString() -> Foundation.NSString
+  public func decode<D>(_ type: D.Type, decoder: Foundation.JSONDecoder = .init()) throws -> D where D : Swift.Decodable
+}
+extension Int {
+  public static var zero: Swift.Int {
+    get
+  }
+  public static var one: Swift.Int {
+    get
+  }
+  public func toString() -> Swift.String
+}
+extension UInt8 {
+  public func toString() -> Swift.String
+  public static var zero: Swift.UInt8 {
+    get
+  }
+  public static var one: Swift.UInt8 {
+    get
+  }
+}
+extension Double {
+  public func toString() -> Swift.String
+  public func toRadian() -> Swift.Double
+  public func toDegrees() -> Swift.Double
+  public func toUInt() -> Swift.UInt
+}
+extension UInt {
+  public func toString() -> Swift.String
+  public func toInt() -> Swift.Int
+  public func toDouble() -> Swift.Double
+}
+extension UInt16 {
+  public func toString() -> Swift.String
+  public func toUInt64() -> Swift.UInt64
+}
+extension UInt64 {
+  public func toUInt16() -> Swift.UInt16
+}
+extension Bool {
+  public static var `true`: Swift.Bool {
+    get
+  }
+  public static var `false`: Swift.Bool {
+    get
+  }
+  public func toUInt8() -> Swift.UInt8
+}
+extension UIColor {
+  convenience public init?(hex: Swift.String)
+}
+public typealias Timestamp = Swift.UInt
+public typealias Byte = Swift.UInt8
+extension CGSize {
+  public static var zero: CoreGraphics.CGSize {
+    get
+  }
+}
+extension Encodable {
+  public func encode(via encoder: Foundation.JSONEncoder = .init()) throws -> Foundation.Data
+}
+public var hasConnection: Swift.Bool {
+  get
+}
+public protocol Font {
+  var name: Swift.String { get }
+}
+extension UIFont {
+  convenience public init(_ font: Simplebest.Font, for size: CoreGraphics.CGFloat)
+}
+extension String {
+  public static var empty: Swift.String {
+    get
+  }
+  public static var space: Swift.String {
+    get
+  }
+  public static var tab: Swift.String {
+    get
+  }
+  public static var zero: Swift.String {
+    get
+  }
+  public static var one: Swift.String {
+    get
+  }
+  public static var ok: Swift.String {
+    get
+  }
+  public static var dot: Swift.String {
+    get
+  }
+  public func toNumber(_ sign: Swift.String = "EN") -> Foundation.NSNumber?
+  public static var newLine: Swift.String {
+    get
+  }
+  public func convert(to language: Swift.String = "ar") -> Swift.String
+  public func isEnglishNumbers() -> Swift.Bool
+  public var withoutZero: Swift.String {
+    get
+  }
+  public var toData: Foundation.Data {
+    get
+  }
+  public func toDate(format: Swift.String = "YYYY-MM-dd") -> Foundation.Date?
+  public var isBackspace: Swift.Bool {
+    get
+  }
+}
+extension Character {
+  public func toString() -> Swift.String
+}
+extension Substring {
+  public func toString() -> Swift.String
+}
+extension DefaultStringInterpolation {
+  public mutating func appendInterpolation(double: Swift.Double, specifier: Swift.String = "%.1f")
+  public mutating func appendInterpolation(seconds: Simplebest.Timestamp, _ defaultValue: @autoclosure () -> Swift.String = .zero)
+  public mutating func appendInterpolation(fromArabicFloat number: Swift.String)
+  public mutating func appendInterpolation(date: Foundation.Date, format: Swift.String = "dd MMM yyyy", style: Foundation.DateFormatter.Style = .long, language: Swift.String = "en")
+  public mutating func appendInterpolation(time: Swift.String, language: Swift.String = "en")
+}
+extension Date {
+  public static var timestamp: Swift.UInt {
+    get
+  }
+  public static func format(seconds: Simplebest.Timestamp) -> Swift.String
+}
+extension Array {
+  public static var empty: Swift.Array<Element> {
+    get
+  }
+}
+extension Dictionary {
+  public static var empty: Swift.Dictionary<Key, Value> {
+    get
+  }
+}
+extension Collection {
+  public var isNotEmpty: Swift.Bool {
+    get
+  }
+  public subscript(safe index: Self.Index) -> Self.Element? {
+    get
+  }
+  public func take(_ numberOfElements: Swift.Int) -> Self.SubSequence
+}
+extension Sequence where Self.Element : Swift.Hashable {
+  public func unique() -> [Self.Iterator.Element]
+}

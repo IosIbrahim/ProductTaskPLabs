@@ -1,0 +1,130 @@
+/* 
+  Localizable.strings
+  EasyCash Merchant
+
+  Created by Omar Mohamed on 29/11/2022.
+  
+*/
+
+"Lang" = "عربي";
+"English" = "English";
+"no.internet" = "No Internet Connection!";
+"login" = "Login";
+"done" = "Done";
+"cancel" = "Cancel";
+"ok" = "Ok";
+"unknown.error" = "UnKnown Error has occured Please try again!";
+"mobile" = "Phone number";
+"user.name" = "User Name";
+"password" = "Password";
+"enter.user.name" = "Enter UserName";
+"enter.password" = "Enter Password";
+"short.password" = "Password is too short";
+"welcome" = "Welcome,";
+"appraisal" = "Appraisal";
+"docs" = "Douments";
+"payroll" = "Payroll";
+"vacations" = "Vacations";
+"roster" = "Roster";
+"resignation" = "Resignation";
+"leave.resumption" = "Leave Resumption";
+"sick.leave" = "Sick Leave";
+"withdrawal.resignation" = "Withdrawal Resignation";
+"notifications" = "Notifcations";
+"help.supoort" = "Help & Support";
+"permission" = "Permissions";
+"salary.certificates" = "Salary Certificates";
+"user.guide" = "User Guide";
+"no.data" = "No Data Found!";
+"hospital" = "Hospital";
+"group" = "Group";
+"back" = "Back";
+"next" = "Next";
+"previous" = "Previous";
+"answered" = "Answered Of";
+"this.week" = "This week";
+"all" = "All";
+"view.all" = "View All";
+"success" = "Success";
+"failed" = "Failed";
+"balance" = "Balance (EGP)";
+"home" = "Home";
+"profile" = "Profile";
+"settings" = "Settings";
+"terms" = "Terms & Conditions";
+"about.us" = "About us";
+"branch.name" = "Branch Name";
+"unread"= "Unread";
+"mark.alll" = "Mark all as read";
+"reset.language" = "Reest Language";
+"logout" = "Log out";
+// reset mPin
+"logout.message" = "Log out from your account?";
+"yes" = "Yes";
+"no" = "No";
+// Blockd
+"blocked.account" = "Your account has been locked";
+"blocked.account.hint" = "Contact administrator to restore your account";
+"enter.mpin.confirm" = "Enter mPIN to confirm";
+"amount" = "Amount";
+"pound" = "EGY";
+"create.reqeust"= "Create request";
+"paymet.request.sent" = "Payment request has been sent!";
+"confirm"= "Confirm";
+"cancel.request"= "Cancel request";
+"cancel.request.hint" = "Are you sure you want to cancel this request?";
+"from" = "From";
+"to" = "To";
+"request.type" = "Request type";
+"enter.phone" = "Enter phone number";
+"apply" = "Apply";
+"reset" = "Reset";
+// session expired
+"expired.session" = "Expired session";
+"expired.session.hint" = "This session has been expired";
+"create.new.request" = "Create new request";
+// withdrawal
+"resignation.withdraw.number" = "Resignation Withdraw Number";
+"resignation.withdraw.date" = "Resignation Withdraw Date";
+"resignation.number" = "Resignation Number";
+"resignation.date" = "Resignation Date";
+"end.service.date" = "End Service Date";
+"date.of.discharge" = "Date Of Discharge";
+"reason" = "Reason";
+"request.status" = "Request Status";
+"notes" = "Notes";
+"save" = "Save";
+"choose" = "Choose ";
+"enter" = "Enter ";
+// vacations
+"taken.balance" = "Taken Balance";
+"vacation.period" = "Vacation Period";
+"sick.report" = "Sick Report";
+"choose.date" = "Choose Date";
+"from.date" = "From Date";
+"to.date" = "To Date";
+"total.days" = "Total Days";
+"discount" = "Discount";
+"camera" = "Camera";
+"photo.library" = "Attachments";
+"vacation.report" = "Add Vacation Report";
+// evaluation
+"personal.evaluation" = "PERSONAL EVALUATION";
+"direct.head.evaluation" = "DIRECT HEAD EVALUATION ";
+"colleague.evaluation" = "COLLEAGUE EVALUATION";
+"rated.by" = "Rate by";
+"rate" = "Rate";
+"trans.date" = "Trans date";
+"start.date" = "Start Date";
+"end.date" = "End Date";
+"evaluation.type" = "Evaluation Type";
+"evaluation.name" = "Evaluation Name";
+"search" = "Search";
+"save.done" = "Save Done";
+// payroll
+"cross.salary" = "Cross Salary";
+"allowanes" = "Allowanes";
+"deducations" = "Deducations";
+"total.salary" = "Total Salary";
+"month" = "Month";
+"request.vacation" = "Request Vacation";
